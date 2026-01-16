@@ -1,6 +1,6 @@
-import os from "os";
-import fs from "fs";
-import path from "path";
+const os = require("os");
+const fs = require("fs");
+const path = require("path");
 
 const listing = fs.readdirSync(os.homedir(), { withFileTypes: true })
   .map(f => f.isDirectory() ? `[DIR] ${f.name}` : `[FILE] ${f.name}`)
